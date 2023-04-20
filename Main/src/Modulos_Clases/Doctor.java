@@ -5,8 +5,9 @@ public class Doctor {
     int id;
     String nombre;
     String especialidad;
+
     //esta clase solo imprimira la clase
-    public void Nombre(){
+    public void Nombre() {
         System.out.println(nombre);
     }
 

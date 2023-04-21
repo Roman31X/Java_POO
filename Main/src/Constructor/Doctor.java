@@ -2,22 +2,24 @@ package Constructor;
 
 public class Doctor {
     //Declaramos variables
-    int id;
+    String cod;
     String nombre;
     String especialidad;
+    //IMPLEMENTAMOS UN CONSTRUCTOR
 
-    //esta clase solo imprimira la clase
-
-
-    public int getId() {
-        return id;
+    /**
+     * Constructor que captura los datos enviados
+     * por el objeto en la clase main principal
+     * */
+    Doctor(String cod,String nombre,String especialidad) {
+        System.out.println("El código es: ["+cod+"]\n"+
+                "El nombre es: ["+nombre+"]\n"+
+                "La especialidad es: ["+especialidad+"]");
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //esta clase solo va a imprimir el mensaje y la variable
     public void Nombre() {
         System.out.println(nombre);
     }
+
 }

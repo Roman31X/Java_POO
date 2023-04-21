@@ -12,9 +12,8 @@ public class Main {
          * Declaramos primero al módulo [Doctor] para
          * después declara el objeto [doc]
          * */
-        Doctor doc = new Doctor();
+        Doctor doc = new Doctor("U172036","Diego Roman","Desarrollador Junior");
         //le dare valores a las variables de la clase
-        doc.nombre = "Diego Roman";
-        doc.Nombre();
+        doc.nombre = "Escorpio";
     }
 }

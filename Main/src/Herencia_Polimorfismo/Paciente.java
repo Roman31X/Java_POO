@@ -1,4 +1,4 @@
-package Herencia;
+package Herencia_Polimorfismo;
 
 public class Paciente extends Usuario{
     //Atributos

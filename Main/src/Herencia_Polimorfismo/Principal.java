@@ -1,4 +1,4 @@
-package Herencia;
+package Herencia_Polimorfismo;
 public class Principal {
     public static void main(String[] args) {
         //Creamos un OBJETOS PARA CADA CLASE [USUARIO - DOCTOR - PACIENTE]
@@ -11,8 +11,7 @@ public class Principal {
         * a través de los parametros ya declarados en el objeto de
         * las clases hijas este sobre escribira los datos enviados antes*/
         Usuario usu = new Usuario("Diego","die.haa31@gmail.com");
-        usu.setCelular("984620753");
-        usu.setUbicacion("Av. Panamericana N");
+
         //MOSTRAR atraves de el metodo [toString()]
         System.out.println(usu);
         //mostrar los datos enviados el objeto paciente

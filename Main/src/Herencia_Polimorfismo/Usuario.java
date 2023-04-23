@@ -1,4 +1,4 @@
-package Herencia;
+package Herencia_Polimorfismo;
 
 public class Usuario {
     //Atributos
@@ -54,7 +54,7 @@ public class Usuario {
         return "||================USUARIO================||\n"+
                "|| El nombre es: ["+nombre+"]\n"+
                "|| El email es: ["+email+"]\n"+
-               "|| Su ubicación es: ["+getUbicacion()+"]\n"+
-               "|| Su numero de celular es: ["+getCelular()+"]";
+               "|| Su ubicación es: ["+ubicacion+"]\n"+
+               "|| Su numero de celular es: ["+celular+"]";
     }
 }

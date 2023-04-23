@@ -1,4 +1,4 @@
-package Constructor;
+package Encapsulamieto_Construptor;
 import java.util.Scanner;
 public class Hospital {
     //Creamos las variables del Hospital

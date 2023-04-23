@@ -1,5 +1,4 @@
-package Constructor;
-import static Constructor.Hospital.*;
+package Encapsulamieto_Construptor;
 import java.util.*;
 public class Main_Static {
     public static void main(String[] args) {

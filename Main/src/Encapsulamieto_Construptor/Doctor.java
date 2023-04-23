@@ -1,10 +1,11 @@
-package Constructor;
+package Encapsulamieto_Construptor;
 
 public class Doctor {
     //Declaramos variables
-    String cod;
-    String nombre;
-    String especialidad;
+    //[Encapsulamos] con el prefijo [private]
+    private String cod;
+    private String nombre;
+    private String especialidad;
     //encapsula la dos variables solo a nivel clase
     private double peso = 0;
     private double altura = 0;

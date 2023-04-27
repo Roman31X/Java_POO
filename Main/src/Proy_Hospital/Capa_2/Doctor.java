@@ -4,9 +4,8 @@ public class Doctor extends Usuario{
     //Atributos encapsulados
     private String especialidad;
     //constructor
-    public Doctor(String nombre, String emai, String especialidad) {
+    public Doctor(String nombre, String emai) {
         super(nombre, emai);
-        this.especialidad = especialidad;
     }
     //método getter y setter
     public String getEspecialidad() {
@@ -16,4 +15,17 @@ public class Doctor extends Usuario{
         this.especialidad = especialidad;
     }
 
+    @Override
+    public String toString() {
+        return "|| La especialidad es: [" + especialidad + "]\n";
+    }
+
+    //metodo toString
+    @Override
+    public void Trabajador() {
+        System.out.println("||=========AREA HOSPITAL===========||");
+        System.out.println("||     Hospital   - Trabajador     ||");
+        System.out.println("||   Departamento - Operaciones    ||");
+        System.out.println("||   Departamento - Nutrición      ||");
+    }
 }

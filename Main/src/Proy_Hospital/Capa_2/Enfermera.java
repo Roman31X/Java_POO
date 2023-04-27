@@ -4,9 +4,8 @@ public class Enfermera extends Usuario{
     //atributo
     private String especialidad;
     //constructor
-    public Enfermera(String nombre, String emai, String especialidad) {
+    public Enfermera(String nombre, String emai) {
         super(nombre, emai);
-        this.especialidad = especialidad;
     }
     //getter y setter
     public String getEspecialidad() {
@@ -16,4 +15,11 @@ public class Enfermera extends Usuario{
         this.especialidad = especialidad;
     }
 
+    @Override
+    public void Trabajador() {
+        System.out.println("||===========HOSPITAL==========||");
+        System.out.println("||  Hospital   - Trabajador    ||");
+        System.out.println("||        Area - Traumatología ||");
+        System.out.println("||        Area - Cuidado       ||");
+    }
 }

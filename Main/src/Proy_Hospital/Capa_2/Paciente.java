@@ -6,11 +6,8 @@ public class Paciente extends Usuario{
     private double peso;
     private String sintomas;
     //constructor
-    public Paciente(String nombre, String emai, double talla, double peso, String sintomas) {
+    public Paciente(String nombre, String emai) {
         super(nombre, emai);
-        this.talla = talla;
-        this.peso = peso;
-        this.sintomas = sintomas;
     }
     //método getter y setter
     public double getTalla() {
@@ -32,4 +29,10 @@ public class Paciente extends Usuario{
         this.sintomas = sintomas;
     }
 
+    @Override
+    public void Trabajador() {
+        System.out.println("||=======ES PACIENTE=======||");
+        System.out.println("||  Historial del paciente ||");
+        System.out.println("||  Tipo de tratamiento    ||");
+    }
 }

@@ -30,5 +30,14 @@ public abstract class  Usuario {
     public void setCelular(String celular) {
         this.celular = celular;
     }
-
+    //metodo toString
+    @Override
+    public String toString() {
+        return "||================USUARIO===============||" +
+               "|| Nombre del usuario: [" + nombre + "]\n" +
+               "|| Email del usuario: [" + emai + "]\n" +
+               "|| numero de celular: [" + celular + "]\n";
+    }
+    //método abstracto
+    public abstract void Trabajador();
 }

@@ -1,7 +1,6 @@
 package Proy_Hospital.Capa_2;
 
 import java.util.Date;
-import Proy_Hospital.*;
 
 public class CitaDoctor implements Programacion{
     //Atributos encapsulados

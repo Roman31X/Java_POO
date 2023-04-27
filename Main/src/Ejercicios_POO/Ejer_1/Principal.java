@@ -16,7 +16,7 @@ public class Principal {
         double precio;
         int cantidad = 0, barato = 0;
         //SOLICITAMOS
-        System.out.println("Ingrese cantidad de autos a registrar");
+        System.out.print("Ingrese cantidad de autos a registrar =>");
         cantidad = sc.nextInt();
         //Creamos un arreglo como objeto de la clase Vehículo
         Vehiculo auto[] = new Vehiculo[cantidad];

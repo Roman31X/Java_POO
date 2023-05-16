@@ -6,7 +6,7 @@ import Proy_Hospital.Capa_2.Paciente;
 import java.util.*;
 public class Menu_Interfas {
     //Creamos un arreglo que almacene los meses del año
-    public static String [] mes = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"};
+    public static final String [] mes = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"};
     //Creamos variables de tipo publico para [DOCTOR - PACINETE - ENFERMERA]
     public static Doctor logindoc;//doctor
     public static Enfermera loginenfer;//enfermera
@@ -25,6 +25,7 @@ public class Menu_Interfas {
             System.out.println("||   [2] - ENFERMERA ||");
             System.out.println("||   [3] - PACIENTE  ||");
             System.out.println("||   [0] - SALIR     ||");
+            System.out.print("|| Ingrese : ");
             //Pedimos el valor de opción de menu
             opcion = sc.nextInt();
             //ahora se evaluara la opción ingresada
@@ -38,7 +39,7 @@ public class Menu_Interfas {
                 case 3:
                     //Autenticaremos el usuario
                     Autenticar(opcion);
-                case 4: opcion = 1;break;
+                case 0: opcion = 1;break;
             }
         }while(opcion != 1);
 
@@ -72,7 +73,8 @@ public class Menu_Interfas {
         do {
             //Solicitamos el correo del usuario
             Scanner sc = new Scanner(System.in);
-            System.out.println("Ingrese su correo [usuario.gmail.com]");
+            System.out.println("Ingrese su correo : [usuario.gmail.com]");
+            System.out.print("|| Ingrese CORREO : ");
             String correo = sc.nextLine();
             //validaremos el correo
             if(usuario == 1){
@@ -82,6 +84,8 @@ public class Menu_Interfas {
                         email = true;
                         //obtener los datos del usuario
                         logindoc = doc;
+                        //método una vez se loge
+                        MenuDoctor.DoctorMenu();
                     }
                 }
             }else if( usuario == 2){
@@ -91,15 +95,18 @@ public class Menu_Interfas {
                         email = true;
                         //obtener los datos del usuario
                         loginenfer = enfer;
+                        //método una vez se loge correctamnete
                     }
                 }
-            }else{
+            }else if( usuario == 3){
                 //bucle que recorrera el arraylist
                 for (Paciente paci:paciente) {
                     if(paci.getEmai().equals(correo)){
                         email = true;
                         //obtener los datos del usuario
                         loginpaci = paci;
+                        //método que se ejecutara una vez se loge correctamente
+                        MenuPaciente.PacienteMenu();
                     }
                 }
             }

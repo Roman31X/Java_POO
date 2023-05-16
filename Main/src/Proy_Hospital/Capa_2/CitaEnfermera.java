@@ -43,7 +43,7 @@ public class CitaEnfermera implements Programacion{
     //Al implementar llamamos a su método de la interfas
     //Programación
     @Override
-    public void Programacion(Date date, String fecha) {
+    public void Programacion(String date, String fecha) {
 
     }
 }

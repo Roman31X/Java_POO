@@ -48,12 +48,20 @@ public class Venta extends JFrame {
         //CREAMOS UNA INSTANCIA del tipo [JLabel = etiquetas]
         //PODEMOS ENVIAR EL ARGUMENTO DE TIPO CADENA "Hola"
         //El constructor por determinación lo puede aceptar
-        JLabel etiqueta = new JLabel();
+        JLabel etiqueta = new JLabel("Hola",SwingConstants.CENTER); //para mostrar texto en la etiqueta y centrarlo
         //para darle nombre la etiqueta
-        etiqueta.setText("Hola");
+        //etiqueta.setText("Hola");
         //le damos tamaño y posicion a la etiqueta
-        etiqueta.setBounds(20,10,50,30);
+        etiqueta.setBounds(20,10,50,15);
         //agregamos la etiqueta al panel
         panel1.add(etiqueta);
+        //Color a la Letra de la etiqueta
+        etiqueta.setForeground(Color.BLACK);
+        //Permitir editar la etiqueta
+        etiqueta.setOpaque(true);
+        //Cambiar el color de fondo de la etiqueta
+        etiqueta.setBackground(Color.CYAN);
+        etiqueta.setFont(new Font("chiller",0,30));
+
     }
 }

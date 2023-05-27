@@ -40,7 +40,7 @@ public class Venta extends JFrame {
     private void iniciarComponentes(){
         JPanel panel1 = new JPanel(); //creación de un panel
         //colocar encima de la Ventana
-        this.getContentPane().add(panel1);
+        getContentPane().add(panel1);
         //para darle color al panel
         //panel1.setBackground(Color.CYAN);
         //Para desactivar el Layout o Diseño por defecto
@@ -48,11 +48,12 @@ public class Venta extends JFrame {
         //CREAMOS UNA INSTANCIA del tipo [JLabel = etiquetas]
         //PODEMOS ENVIAR EL ARGUMENTO DE TIPO CADENA "Hola"
         //El constructor por determinación lo puede aceptar
-        JLabel etiqueta = new JLabel("Hola",SwingConstants.CENTER); //para mostrar texto en la etiqueta y centrarlo
+        JLabel etiqueta = new JLabel("Hola Mundo",SwingConstants.CENTER); //para mostrar texto en la etiqueta y centrarlo
+        //ETIQUETA - 1 TIPO TEXTO
         //para darle nombre la etiqueta
         //etiqueta.setText("Hola");
         //le damos tamaño y posicion a la etiqueta
-        etiqueta.setBounds(20,10,50,15);
+        etiqueta.setBounds(150,50,100,15);
         //agregamos la etiqueta al panel
         panel1.add(etiqueta);
         //Color a la Letra de la etiqueta
@@ -61,7 +62,17 @@ public class Venta extends JFrame {
         etiqueta.setOpaque(true);
         //Cambiar el color de fondo de la etiqueta
         etiqueta.setBackground(Color.CYAN);
-        etiqueta.setFont(new Font("chiller",0,30));
+        //editar estilo de letra - tipo [negrita, etc] - tamaño
+        etiqueta.setFont(new Font("chiller",0,20));
+
+        //ETIQUETA - 2 IMAGEN
+        ImageIcon imagen = new ImageIcon();
+        JLabel etiqueta2 = new JLabel(imagen);
+        etiqueta2.setLayout(null);
+        //posición
+        etiqueta2.setBounds(20,20,50,50);
+        //agregar al panel
+        panel1.add(etiqueta2);
 
     }
 }

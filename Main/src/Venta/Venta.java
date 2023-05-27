@@ -8,13 +8,15 @@ import java.awt.*;
 //Y EN LE MÉTODO DE LA CLASE AGREGAR EL "extends JFrame"
 //MAS INFORMACIÓN => "https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/JFrame.html"
 public class Venta extends JFrame {
+    //declaramos variable publica de acceso a todos los metodos
+    public JPanel panel1;
     //CONSTRUCTOR DE LA CLASE
     public Venta(){
         //DAMOS TAMAÑO A LA VENTA A TRAVES DE LA SIGUIENTE DECLARACIÓN
         //mediante la sentencia le pasaremos los argumentos
         //COMO PRIMER ARGUMENTO EL [ANCHO] de la ventana
         //COMO SEGUNDO ARGUMENTO EL [LARGO de la ventana
-        setSize(500,400);
+        setSize(500,500);
         //designamos un nombre a la ventana grafica
         setTitle("Mi primera Ventana Jframe");
         //SENTENCIA PARA DETENER LA EJECUCIÓN DESDE LA VENTANA
@@ -34,17 +36,27 @@ public class Venta extends JFrame {
         //establecer color a la Ventana
         //this.getContentPane().setBackground(Color.CYAN);
         //lamamos al metodo que contiene al panel
+        iniciarPaneles();
+    }
+    //agregar un panel a nuestra ventana
+    private void iniciarPaneles(){
         iniciarComponentes();
+        iniciarEtiquetas();
+        ColocarBoton();
     }
     //agregar un panel a nuestra ventana
     private void iniciarComponentes(){
-        JPanel panel1 = new JPanel(); //creación de un panel
+        panel1 = new JPanel(); //creación de un panel
         //colocar encima de la Ventana
         getContentPane().add(panel1);
         //para darle color al panel
         //panel1.setBackground(Color.CYAN);
         //Para desactivar el Layout o Diseño por defecto
         panel1.setLayout(null);
+
+    }
+    //agregamos dos etiquetas a nuetra ventana panel
+    private void iniciarEtiquetas(){
         //CREAMOS UNA INSTANCIA del tipo [JLabel = etiquetas]
         //PODEMOS ENVIAR EL ARGUMENTO DE TIPO CADENA "Hola"
         //El constructor por determinación lo puede aceptar
@@ -66,13 +78,23 @@ public class Venta extends JFrame {
         etiqueta.setFont(new Font("chiller",0,20));
 
         //ETIQUETA - 2 IMAGEN
-        ImageIcon imagen = new ImageIcon();
-        JLabel etiqueta2 = new JLabel(imagen);
-        etiqueta2.setLayout(null);
+
+        JLabel etiqueta2 = new JLabel();
+        etiqueta2.setOpaque(true);
         //posición
-        etiqueta2.setBounds(20,20,50,50);
+        etiqueta2.setBackground(Color.BLUE);
+        etiqueta2.setBounds(250,90,150,200);
+        ImageIcon imagen = new ImageIcon("Main/src/Venta/demiurs.jpg");
+        etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(),etiqueta2.getHeight(),Image.SCALE_SMOOTH))); //ota forma de colocar imagen
+
         //agregar al panel
         panel1.add(etiqueta2);
-
+    }
+    private void ColocarBoton(){
+        JButton boton1 = new JButton();
+        //POSICIÓN
+        boton1.setBounds(100,100,100,40);
+        boton1.setBackground(Color.BLACK);
+        panel1.add(boton1);
     }
 }

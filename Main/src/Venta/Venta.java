@@ -41,8 +41,12 @@ public class Venta extends JFrame {
     //agregar un panel a nuestra ventana
     private void iniciarPaneles(){
         iniciarComponentes();
-        iniciarEtiquetas();
-        ColocarBoton();
+        //iniciarEtiquetas();
+        //ColocarBoton();
+        //RadioBotones();
+        //CajasTexto();
+        //areadeTexto();
+        ListaDesplegable();
     }
     //agregar un panel a nuestra ventana
     private void iniciarComponentes(){
@@ -85,16 +89,85 @@ public class Venta extends JFrame {
         etiqueta2.setBackground(Color.BLUE);
         etiqueta2.setBounds(250,90,150,200);
         ImageIcon imagen = new ImageIcon("Main/src/Venta/demiurs.jpg");
+        //para dar tamaño a la imgen dentro de la etiqueta
+        //se tomara sus datos de medida
         etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(),etiqueta2.getHeight(),Image.SCALE_SMOOTH))); //ota forma de colocar imagen
 
         //agregar al panel
         panel1.add(etiqueta2);
     }
+    //agregamos botones
     private void ColocarBoton(){
-        JButton boton1 = new JButton();
+        //BOTON - 1
+        JButton boton1 = new JButton("Registrar"); //otra forma boton1.getText("click");
         //POSICIÓN
-        boton1.setBounds(100,100,100,40);
-        boton1.setBackground(Color.BLACK);
+        boton1.setBounds(100,100,140,40);
+        boton1.setBackground(Color.CYAN);
+        boton1.setMnemonic('a'); //como dar accion en el boton [alt + a] com si fuera un clic
+        //para iteracion con el boton activar y desactivar
+        boton1.setEnabled(true);
+        boton1.setFont(new Font("arial",Font.BOLD,20));
+        //agregar botron al panel
         panel1.add(boton1);
+
+        //BOTON - 2 - BOTON IMAGEN
+        JButton boton2 = new JButton();
+        boton2.setBounds(100,200,60,60);
+        ImageIcon imagen2 = new ImageIcon("Main/src/Venta/s1.png");
+        boton2.setBackground(Color.GREEN);
+        boton2.setIcon(new ImageIcon(imagen2.getImage().getScaledInstance(boton2.getWidth(),boton2.getHeight(),Image.SCALE_SMOOTH)));
+        panel1.add(boton2);
+
+    }
+    //agregamos radio bootons
+    private void RadioBotones(){
+        JRadioButton radioboton1 = new JRadioButton("Opción [1]",false);
+        radioboton1.setBounds(50,100,100,50);
+        //para desabilitar el boton
+        //radioboton1.setEnabled(false);
+        //agregar al panel
+        panel1.add(radioboton1);
+        //segundo radioboton
+        JRadioButton radioboton2 = new JRadioButton("Opción [2]",false);
+        radioboton2.setBounds(50,150,100,50);
+        //agregar al panel
+        panel1.add(radioboton2);
+        JRadioButton radioboton3 = new JRadioButton("Opción [3]",false);
+        radioboton3.setBounds(50,200,100,50);
+        //agregar al panel
+        panel1.add(radioboton3);
+
+        //GRUPO DE BOTONES
+        //ayuda a limitar a la selección de una sola opción
+        ButtonGroup grupo1 = new ButtonGroup();
+        grupo1.add(radioboton1);
+        grupo1.add(radioboton2);
+        grupo1.add(radioboton3);
+    }
+    //agregamos fila de texto
+    private void CajasTexto(){
+        JTextField usuario = new JTextField();
+        usuario.setBounds(50,50,100,30);
+        panel1.add(usuario);
+    }
+    //agregamos areas de texto
+    private void areadeTexto(){
+        JTextArea caja1 = new JTextArea();
+        caja1.setBounds(20,20,300,200);
+        caja1.setText("Escribe aqui tu comentario:");
+        caja1.append("\nDescribe tu personalidad:"); //te permite agregar otra linea de texto
+        caja1.setEditable(false);//no dejara editar el texto
+        panel1.add(caja1);
+    }
+    //agregar lista despegable
+    private void ListaDesplegable(){
+        String [] paises = {"Perú","Colombia","Chile","Argentina"};
+        JComboBox lista1 = new JComboBox(paises);
+        //agregar otro item a la lista
+        lista1.addItem("Ecuador");
+        //seleccionar el primero objeto visto
+        lista1.setSelectedItem("Ecuador");
+        lista1.setBounds(20,20,100,30);
+        panel1.add(lista1);
     }
 }

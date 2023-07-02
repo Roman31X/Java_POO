@@ -3,25 +3,25 @@ package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 import java.util.Date;
 
 public class Magazine extends Publication {
-	
+	//Atributo
 	private int id;
-	
+
+	//Constructor
 	public Magazine(String title, Date edititionDate, String editorial) {
 		super(title, edititionDate, editorial);
-		// TODO Auto-generated constructor stub
 	}
-	
+
+	//getter
 	public int getId() {
 		return id;
 	}
-	
+
+	//Metodo toString
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return  "\n :: MAGAZINE ::" + 
 				"\n Title: " + getTitle() +
 				"\n Editorial: " + getEditorial() + 
 				"\n Edition Date: " + getEdititionDate();
 	}
-
 }

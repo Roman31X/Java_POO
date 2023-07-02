@@ -7,15 +7,15 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
-
+	//Método ejecutor
 	public static void main(String[] args) {
 		showMenu();
 	}
 
+	//Método principal de Menu
 	public static void showMenu() {
 		int exit = 0;
 		do {
-
 			System.out.println("BIENVENIDOS AMAZON VIEWER");
 			System.out.println("");
 			System.out.println("Selecciona el número de la opción deseada");
@@ -177,6 +177,30 @@ public class Main {
 			System.out.println();
 			System.out.println(":: BOOKS ::");
 			System.out.println();
+
+			//Lector de menu
+			for (int i = 0; i < books.size(); i++) { //1. Serie 1
+				System.out.println(i+1 + ". " + books.get(i).getTitle() + " Visto: " + books.get(i));
+			}
+
+			System.out.println("0. Regresar al Menu");
+			System.out.println();
+
+			//Leer Respuesta usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+
+			if(response == 0) {
+				exit=0;
+				showMenu();
+			}
+
+			if(response > 0){
+				Book bookSelectd = books.get(response-1);
+				bookSelectd.view();
+			}
+
+
 		}while(exit !=0);
 	}
 

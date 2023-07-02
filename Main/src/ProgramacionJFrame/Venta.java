@@ -1,4 +1,4 @@
-package Venta;
+package ProgramacionJFrame;
 
 import javax.swing.*;
 import java.awt.*;

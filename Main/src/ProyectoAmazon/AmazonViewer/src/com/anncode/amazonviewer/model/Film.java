@@ -1,16 +1,14 @@
 package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 
-public class Film {
-	
+public abstract class Film {
+	//Atributos
 	private String title;
 	private String genre;
 	private String creator;
 	private int duration;
 	private short year;
 	private boolean viewed;
-	
-	
-	
+	//Constructor
 	public Film(String title, String genre, String creator, int duration) {
 		super();
 		this.title = title;
@@ -18,7 +16,7 @@ public class Film {
 		this.creator = creator;
 		this.duration = duration;
 	}
-	
+	//Getter y Setter
 	public String getTitle() {
 		return title;
 	}
@@ -56,14 +54,16 @@ public class Film {
 		}else {
 			visto = "No";
 		}
-		
 		return visto;
+	}
+	public boolean getViewed(){
+		return viewed;
 	}
 	public void setViewed(boolean viewed) {
 		this.viewed = viewed;
 	}
-	
-	
+	//Métodos Abstractos
+	public abstract void view();
 	
 
 }

@@ -1,6 +1,4 @@
-package Venta;
-
-import javax.swing.*;
+package ProgramacionJFrame;
 
 public class MainVentana {
     public static void main(String[] args) {

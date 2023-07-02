@@ -1,5 +1,6 @@
 package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Book extends Publication implements IVisualizable {
@@ -80,6 +81,13 @@ public class Book extends Publication implements IVisualizable {
 		}else {
 			setTimeReaded(0);
 		}
+	}
+
+	public static ArrayList<Book> makeBookList() {
+			ArrayList<Book> books = new ArrayList();
+
+
+		return books;
 	}
 	
 }

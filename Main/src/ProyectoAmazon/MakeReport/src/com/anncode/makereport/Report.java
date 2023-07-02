@@ -1,4 +1,4 @@
-package com.anncode.makereport;
+package ProyectoAmazon.MakeReport.src.com.anncode.makereport;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -54,9 +54,7 @@ public class Report {
 			System.out.println("Ingresa los datos del archivo");
 		}
 	}
-	
-	
-	
+
 	public String getExtension() {
 		return extension;
 	}

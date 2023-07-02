@@ -3,30 +3,28 @@ package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 import java.util.ArrayList;
 
 public class Serie extends Film {
-	
+	//Atributos
 	private int id;
 	private int sessionQuantity;
 	private ArrayList<Chapter> chapters;
-	
 
+	//Constructor
 	public Serie(String title, String genre, String creator, int duration, int sessionQuantity, ArrayList<Chapter> chapters) {
 		super(title, genre, creator, duration);
-		// TODO Auto-generated constructor stub
 		this.sessionQuantity = sessionQuantity;
-		this.chapters = chapters;
 	}
 
+	//Getter y setter
 	public int getId() {
 		return id;
 	}
-
 	public int getSessionQuantity() {
 		return sessionQuantity;
 	}
-
 	public void setSessionQuantity(int sessionQuantity) {
 		this.sessionQuantity = sessionQuantity;
 	}
+
 
 	public ArrayList<Chapter> getChapters() {
 		return chapters;
@@ -38,7 +36,6 @@ public class Serie extends Film {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return  "\n :: SERIE ::" + 
 				"\n Title: " + getTitle() +
 				"\n Genero: " + getGenre() + 
@@ -47,15 +44,19 @@ public class Serie extends Film {
 				"\n Duration: " + getDuration();
 	}
 
+	//Método de lectura de datos
 	public static ArrayList<Serie> makeSeriesList() {
 		ArrayList<Serie> series = new ArrayList();
-		
 		for (int i = 1; i <= 5; i++) {
-			series.add(new Serie("Serie "+i, "genero "+i, "creador "+i, 1200, 5, Chapter.makeChaptersList()));
-			
+			Serie serie = new Serie("Serie: "+i,"Genero: "+i,"Creador"+i,1200,5);
+			serie.setChapters(Chapter.makeChaptersList(serie));
+			series.add(serie);
 		}
-		
 		return series;
 	}
-	
+
+	@Override
+	public void view() {
+
+	}
 }

@@ -24,16 +24,14 @@ public class Serie extends Film {
 	public void setSessionQuantity(int sessionQuantity) {
 		this.sessionQuantity = sessionQuantity;
 	}
-
-
 	public ArrayList<Chapter> getChapters() {
 		return chapters;
 	}
-
 	public void setChapters(ArrayList<Chapter> chapters) {
 		this.chapters = chapters;
 	}
-	
+
+	//Método toString
 	@Override
 	public String toString() {
 		return  "\n :: SERIE ::" + 
@@ -48,7 +46,7 @@ public class Serie extends Film {
 	public static ArrayList<Serie> makeSeriesList() {
 		ArrayList<Serie> series = new ArrayList();
 		for (int i = 1; i <= 5; i++) {
-			//Serie serie = new Serie("Serie: "+i,"Genero: "+i,"Creador"+i,1200,5);
+			//Serie serie = new Serie("Serie: "+i,"Genero: "+i,"Creador: "+i,1200,2,5);
 			//serie.setChapters(Chapter.makeChaptersList(serie));
 			//series.add(serie);
 		}
@@ -57,6 +55,6 @@ public class Serie extends Film {
 
 	@Override
 	public void view() {
-
+		setViewed(true);
 	}
 }

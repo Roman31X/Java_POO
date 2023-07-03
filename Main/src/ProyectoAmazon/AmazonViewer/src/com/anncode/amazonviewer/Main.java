@@ -1,7 +1,9 @@
 package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer;
 
 import ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model.*;
+import ProyectoAmazon.MakeReport.src.com.anncode.makereport.Report;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -180,7 +182,7 @@ public class Main {
 
 			//Lector de menu
 			for (int i = 0; i < books.size(); i++) { //1. Serie 1
-				System.out.println(i+1 + ". " + books.get(i).getTitle() + " Visto: " + books.get(i));
+				System.out.println(i+1 + ". " + books.get(i).getTitle() + " Leido: " + books.get(i));
 			}
 
 			System.out.println("0. Regresar al Menu");
@@ -205,20 +207,56 @@ public class Main {
 	}
 
 	public static void showMagazines() {
+		ArrayList<Magazine> magazines = Magazine.makeMagazineList();
 		int exit = 0;
 		do {
 			System.out.println();
 			System.out.println(":: MAGAZINES ::");
 			System.out.println();
+
+			for (int i = 0; i < magazines.size(); i++) {
+				System.out.println(i+1 + ". "+magazines.get(i).getTitle());
+			}
+
+			System.out.println("0. Regresar al Menu");
+			System.out.println();
+
+			//Leer Respuesta usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+
+			if(response == 0) {
+				exit=0;
+				showMenu();
+			}
+
 		}while(exit !=0);
 	}
 
 	public static void makeReport() {
+		Report report = new Report();
+		report.setNameFile("Reporte");
+		report.setExtension("txt");
+		report.setTitle("::VISTOS::");
+		String contenReport = "";
 
+		for (Movie movie : movies) {
+			contenReport+= movie.toString()+"\n";
+		}
 	}
 
 	public static void makeReport(Date date) {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd-h-m-s-S");
+		String dateString = df.format(date);
+		Report report = new Report();
 
+		report.setNameFile("Reporte : "+dateString);
+		report.setExtension("txt");
+		report.setTitle("::VISTO::");
+
+		SimpleDateFormat dfNameDays = new SimpleDateFormat("E,W MM Y");
+		dateString = dfNameDays.format(date);
+		String contentReport = "Date: "+ dateString + "\n\n\n";
 	}
 
 }

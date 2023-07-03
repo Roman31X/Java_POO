@@ -1,8 +1,9 @@
 package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
-public class Magazine extends Publication {
+public class Magazine extends Publication implements IVisualizable{
 	//Atributo
 	private int id;
 
@@ -23,5 +24,22 @@ public class Magazine extends Publication {
 				"\n Title: " + getTitle() +
 				"\n Editorial: " + getEditorial() + 
 				"\n Edition Date: " + getEdititionDate();
+	}
+
+	@Override
+	public Date startToSee(Date dateI) {
+		return null;
+	}
+
+	@Override
+	public void stopToSee(Date dateI, Date dateF) {
+
+	}
+
+	//Método Lector de datos
+	public static ArrayList<Magazine> makeMagazineList() {
+		ArrayList<Magazine> books = new ArrayList();
+
+		return books;
 	}
 }

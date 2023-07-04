@@ -3,8 +3,6 @@ package ProyectoAmazon.MakeReport.src.com.anncode.makereport;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		Report report = new Report();
 		report.setNameFile("reporte");
 		report.setExtension("txt");

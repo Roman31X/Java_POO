@@ -2,6 +2,10 @@ package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 
 import java.util.ArrayList;
 
+/**
+ * Hereda de {@link  Movie}
+ * @see Film
+ * */
 public class Chapter extends Movie {
 	//Atributos
 	private int id;
@@ -71,7 +75,7 @@ public class Chapter extends Movie {
 			}
 		}
 		if(chapterViewCounter == chapters.size()){
-			getSerie().view(true);
+			//getSerie().view(true);
 		}
 	}
 }

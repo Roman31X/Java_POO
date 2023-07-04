@@ -8,6 +8,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * <h1>Proyecto AmazonViewer</h1>
+ *
+ * Es programa diseña para la simulación de visualización de funciones
+ * de estado de movies, series con sus respectivos chapters, Book y Magazinees.
+ * También permite generar reportes generales y fecha al dia.
+ * <p>
+ * Existe algunas reglas como que todos los elementos pueden ser visualizados
+ * o leidos a exepción de las Megazines,estas solo pueden ser visualizadas a modo
+ * de exposición sin ser leido.
+ *
+ * @author DIEGO
+ * @version 1.1
+ * @since 2023
+ * */
+
 public class Main {
 	//Método ejecutor
 	public static void main(String[] args) {

@@ -1,5 +1,18 @@
 package ProyectoAmazon.AmazonViewer.src.com.anncode.amazonviewer.model;
 
+/**
+ * <h1>Film</h1>
+ * Film es una clase padre
+ * <p>
+ * Esta clase es la clase padre y abstracta
+ * no puede crearse intancias pero contiene el métodos abstractos
+ * {@code view()} que es obligatorio implementar por las hijas
+ *
+ * @author DIEGO
+ * @version 1.1
+ * @2023
+ * */
+
 public abstract class Film {
 	//Atributos
 	private String title;
@@ -63,7 +76,8 @@ public abstract class Film {
 		this.viewed = viewed;
 	}
 	//Métodos Abstractos
+	/**
+	 * {@code view()} es un metodo abstracto necesario a implementar
+	 * */
 	public abstract void view();
-	
-
 }

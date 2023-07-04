@@ -27,10 +27,7 @@ import java.util.Scanner;
 public class Main {
 	//Método ejecutor
 	public static void main(String[] args) {
-		double num = 3;
-		num = num * 10000;
-		System.out.println("num = " + num);
-		//showMenu();
+		showMenu();
 	}
 
 	//Método principal de Menu

@@ -1,4 +1,4 @@
-package FUNCIONES;
+package FUNCIONES.Introduccion;
 
 public class TipoFuncion {
     /**

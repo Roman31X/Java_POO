@@ -1,4 +1,4 @@
-package FUNCIONES.Modulo1;
+package FUNCIONES.Introduccion;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;

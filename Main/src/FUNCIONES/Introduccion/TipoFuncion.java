@@ -53,7 +53,4 @@ public class TipoFuncion {
      *
      *
      * */
-    public static void main(String[] args) {
-
-    }
 }

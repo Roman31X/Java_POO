@@ -1,4 +1,4 @@
-package FundamentosPOO;
+package FundamentosPOO.num;
 
 public enum Colores {
     //Clase constante con datos o variables que pueden ser implementados

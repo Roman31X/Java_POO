@@ -1,4 +1,4 @@
-package FundamentosPOO;
+package FundamentosPOO.num;
 
 public class Casa {
     private Colores color;

@@ -23,12 +23,4 @@ public class Calculadora {
         }
         return total;
     }
-
-    public String suma(String...){
-        String saludo = "";
-        for(String i : argumentos){
-            saludo += i;
-        }
-        return saludo;
-    }
 }

@@ -10,6 +10,5 @@ public class ejemploSobrecargaMetodos {
 
         System.out.println("|++++++++++++++++++++++++++++++|");
         System.out.println("Suma de mas de tres argumentos del mismo tipo : "+calcular.sumar(5,10,15,20,25,30));
-        System.out.println("Suma de mas de tres argumentos del mismo tipo : "+calcular.sumar("Hola","Mundo","Desde","Minecraft","XD"));
     }
 }

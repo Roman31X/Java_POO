@@ -1,6 +1,5 @@
 package POO_Execiciones;
 
-
 import javax.swing.*;
 
 public class ExcepcionCalculadora {

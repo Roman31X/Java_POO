@@ -1,0 +1,7 @@
+Métodos adicionales del LinkedList
+
+● addFirst(), addLast(), getFirst(), getLast(), removeFirst() y removeLast():
+que no están definidos en ningún interfaz o clase que permiten utilizar la
+lista enlazadas como una Pila y una Cola.
+● getFirst(), getLast(), removerFirst() y removeLast() lanzan NoSuchElementException
+si las listas está vacía.

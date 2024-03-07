@@ -1,0 +1,21 @@
+MÉTODO DE COLLECTION
+
+ ● boolean add (Object): Agrega un elemento a la colección. Devuelve false
+ si no se puede agregar.
+ ● boolean addAll (Collection): Agrega una colección que se pasa por argumento.
+ ● void clear(): Elimina todos los elementos que compone la colección.
+ ● boolean contains (Objeto): Verdadero si la colección contiene el objeto que
+ se pasa como parámetro, utiliza el método equals() para ubicar el objeto.
+ ● boolean isEmpty(): Verdadero si la colección está vacía, no contiene
+ elementos.
+ ● Iterator iterator(): Devuelve un objeto Iterator que se puede utilizar
+ avanzar a través de los elementos.
+ ● boolean remove(Object): elimina un elemento de la colección y devuelve true
+ si se ha conseguido.
+ ● boolean removeAll(Collection): Elimina todos los elementos que están contenidos
+  en el argumento. Devuelve true si consigue eliminar cualquiera de ellos.
+ ● boolean retainAll(Collection): Mantiene solamente los elementos que están contenidos
+ en el argumento, es lo que sería una intersección en la teoría de conjuntos.
+ Devuelve verdadero en caso de que se produzca algún cambio.
+ ● int size(): Devuelve el número de elementos que compone la colección.
+ ● Object[]toArray()

@@ -9,4 +9,14 @@ public class calculadora {
 
         return numerador/(double)divisor;
     }
+    public double dividir(String numerador, String divisor)
+            throws DivisionPorZeroException,FormatoNumeroException {
+        try {
+            int num = Integer.parseInt(numerador);
+            int div = Integer.parseInt(divisor);
+            return this.divisor(num,div);
+        }catch (NumberFormatException e){
+            throw new FormatoNumeroException("debe ingresar un número en el numerador y divisor");
+        }
+    }
 }

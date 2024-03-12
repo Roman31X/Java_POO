@@ -1,7 +1,6 @@
 package APIdeColecciondeJava.EjemplosSet;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class EjemploHashSetAgregar {
     public static void main(String[] args) {
@@ -14,7 +13,13 @@ public class EjemploHashSetAgregar {
         numeros.add("Cinco");
         System.out.println(numeros);
 
-        //el SET no permite repetidos Ejemplo:
+        //A partir de un Set podremos crear un ArrayList<>();
+        List<String> listaOrdenada = new ArrayList<>(numeros);
+        Collections.sort(listaOrdenada);
+        System.out.println("Lista ordenada alfabéticamente");
+        System.out.println(listaOrdenada);
+
+        //el SET no permite repetido Ejemplo:
         boolean permite = numeros.add("Tres");
         System.out.println("SET permite datos duplicados : "+permite);
         System.out.println(numeros);

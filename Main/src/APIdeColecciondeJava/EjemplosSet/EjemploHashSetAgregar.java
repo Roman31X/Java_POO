@@ -15,7 +15,6 @@ public class EjemploHashSetAgregar {
         System.out.println(numeros);
 
         //el SET no permite repetidos Ejemplo:
-
         boolean permite = numeros.add("Tres");
         System.out.println("SET permite datos duplicados : "+permite);
         System.out.println(numeros);

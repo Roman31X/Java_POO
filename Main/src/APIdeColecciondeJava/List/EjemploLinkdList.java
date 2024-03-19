@@ -5,6 +5,7 @@ import APIdeColecciondeJava.Modelo.Alumno;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class EjemploLinkdList {
     public static void main(String[] args) {
@@ -45,5 +46,16 @@ public class EjemploLinkdList {
         //MODIFICAR por indice
         enlazada.set(3,new Alumno("Lala",7));
         System.out.println(enlazada);
+
+        System.out.println("**************************************************");
+        //IMPLEMENTANDO ITERATOR PARA RECORRER LIST
+        ListIterator<Alumno> l1 = enlazada.listIterator();
+        while (l1.hasNext()){
+            System.out.println(l1.next()); //ORDEN ASCENDENTE
+        }
+        System.out.println();
+        while(l1.hasPrevious()){
+            System.out.println(l1.previous()); //ORDEN DESCENDENTE
+        }
     }
 }

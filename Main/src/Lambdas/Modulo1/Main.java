@@ -1,4 +1,4 @@
-package Lambdas;
+package Lambdas.Modulo1;
 
 public class Main {
     public static void main(String[] args) {

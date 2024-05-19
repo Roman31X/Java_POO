@@ -1,4 +1,4 @@
-package Lambdas;
+package Lambdas.Modulo1;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;

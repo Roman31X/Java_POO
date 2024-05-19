@@ -1,4 +1,4 @@
-package Lambdas;
+package Lambdas.Modulo1;
 
 @FunctionalInterface
 public interface PrimeraFuncion {

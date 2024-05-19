@@ -31,15 +31,5 @@ public class EjemploexecutorFuture {
         System.out.println(resultado.get(5,TimeUnit.SECONDS));
         System.out.println(resultado.isDone());
         System.out.println("Continuamos....");
-
-        //COPIA DE CODIGO
-        //System.out.println(resultado.isDone());
-        while(!resultado.isDone()){
-            System.out.println("Ejecutando tarea....");
-            TimeUnit.MILLISECONDS.sleep(1500);
-        }
-        System.out.println(resultado.get(5,TimeUnit.SECONDS));
-        System.out.println(resultado.isDone());
-        System.out.println("Continuamos....");
     }
 }

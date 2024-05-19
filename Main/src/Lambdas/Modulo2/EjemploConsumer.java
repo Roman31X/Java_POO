@@ -1,7 +1,10 @@
 package Lambdas.Modulo2;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -22,9 +25,10 @@ public class EjemploConsumer {
          * no es necesario*/
 
         /*ejemplo de tipo String*/
-        Consumer<String> consumidor = saludo -> {
-            System.out.println(saludo);
-        };
+        Consumer<String> consumidor = saludo -> System.out.println(saludo);
+
+        /**Simplificar lambda con método de referencia*/
+        Consumer<String> consumidorReferencia = System.out::println;
 
         /*Ejemplo de tipo Date*/
         Consumer<Date> consumidor2 = (Date fecha) -> {
@@ -36,6 +40,9 @@ public class EjemploConsumer {
          * de hacer el llamado mediante su objeto consumidor*/
 
         consumidor.accept("Hola este es mi saludo por lambda");
+
+        //método lambda comprimido
+        consumidorReferencia.accept("Hola lambda");
 
         consumidor2.accept(new Date());
 
@@ -49,7 +56,10 @@ public class EjemploConsumer {
 
         consumidor3.accept("Diego",24);
 
+        /**Aplicando lambda con list y foreach*/
 
+        List<String> nombres = Arrays.asList("Lucas","Tobias","Diego","Pedro","Miguel");
+        nombres.forEach(consumidorReferencia);
 
     }
 }

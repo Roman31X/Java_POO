@@ -1,5 +1,7 @@
 package Lambdas.Modulo2;
 
+import Lambdas.Modulo2.Modelo.Usuario;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +62,24 @@ public class EjemploConsumer {
 
         List<String> nombres = Arrays.asList("Lucas","Tobias","Diego","Pedro","Miguel");
         nombres.forEach(consumidorReferencia);
+
+        /**Implementación de Lambdas con objetos*/
+
+        Usuario usuario1 = new Usuario();
+        BiConsumer<Usuario, String> asignarNombre = (persona, nombre) ->{
+            persona.setNombre(nombre);
+        };
+
+        /**Implementación de Lambdas simplificada con objetos*/
+        BiConsumer<Usuario, String> asignarNombre2 = Usuario::setNombre;
+
+
+        asignarNombre.accept(usuario1,"Diego");
+        System.out.println("nombre usuario: "+usuario1.getNombre());
+
+        //Simplificado
+        asignarNombre.accept(usuario1,"Pedro");
+        System.out.println("nombre usuario: "+usuario1.getNombre());
 
     }
 }

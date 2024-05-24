@@ -20,7 +20,7 @@ public class TipoFuncion {
 
     //FUNCIÓN DE ORDEN MAYOR
     /**
-     * Una duncion de orden mayor cumple al menos con una estas características
+     * Una función de orden mayor cumple al menos con una estas características
      * #Toma otra función como parámetro
      * #Retorna una función como resultado
      * */

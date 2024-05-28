@@ -14,7 +14,7 @@ public class EjemploTreeSetComparable {
         sa.add(new Alumno("Zeus",2));
         sa.add(new Alumno("Lucas",2));
 
-        System.out.println(sa);
+        sa.forEach(System.out::println);
 
     }
 }

@@ -1,4 +1,4 @@
-package ProgramacionJFrame;
+package ProgramacionJFrame.Modulo_1_Swing;
 
 import javax.swing.*;
 import java.awt.*;

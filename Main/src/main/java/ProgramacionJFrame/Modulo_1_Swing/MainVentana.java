@@ -1,7 +1,5 @@
 package ProgramacionJFrame.Modulo_1_Swing;
 
-import ProgramacionJFrame.Venta;
-
 public class MainVentana {
     public static void main(String[] args) {
         //creamos un objeto de la clase ventana

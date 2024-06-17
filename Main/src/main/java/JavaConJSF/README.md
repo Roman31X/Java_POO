@@ -9,13 +9,15 @@ Para trabajar con java con JSF es necesario conocer:
   - Hipertexto hace referencia a los enlaces de líneas que conectan las páginas
   web entre sí.
 
--[x] Secciones HTML
-Una pagina web se compone de secciones, tales como:
+- [x] Secciones HTML
+
+- Una pagina web se compone de secciones, tales como:
   - Titulo
   - Cabecero
   - Cuerpo
 Y dentro del cuerpo de una página web, se agregan etiquetas o componentes HTML.
 - [x] Componentes HTML
+
 Para diseñar el contenido de una página web tenemos varios componentes o etiquetas,
 por ejemplo:
   - Texto

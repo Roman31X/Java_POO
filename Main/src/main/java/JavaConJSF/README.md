@@ -27,3 +27,10 @@ por ejemplo:
   - ComboBox
   - Tablas
 Entre muchas etiquetas o componentes más. 
+
+## CSS
+- Que significa Cascading Style Sheets u Hojas de Estilo en Cascada.
+- CSS nos permite manejar el diseño de una página web.
+- Se dice que son estilos en cascada porque se puede heredar los estilos entre
+distintos elementos HTML.
+- Con CSS podemos modificar por ejemplo los colores, tamaño o estilo de fuente, etc.

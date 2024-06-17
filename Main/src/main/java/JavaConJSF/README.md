@@ -18,7 +18,7 @@ Para trabajar con java con JSF es necesario conocer:
 Y dentro del cuerpo de una página web, se agregan etiquetas o componentes HTML.
 - [x] Componentes HTML
 
-Para diseñar el contenido de una página web tenemos varios componentes o etiquetas,
+- Para diseñar el contenido de una página web tenemos varios componentes o etiquetas,
 por ejemplo:
   - Texto
   - Imágenes

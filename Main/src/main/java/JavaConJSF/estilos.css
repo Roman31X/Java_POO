@@ -1,0 +1,16 @@
+/* Definición de los estilos CSS*/
+
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Estilos para los link*/
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: yellow;
+}
